@@ -1,40 +1,94 @@
-html{
+/*CUSTOM FONTS*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
+
+
+* {
+    /*MASTER CONTROLS*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    /*MASTER HTML CONTROLS*/
     background-color: white;
 }
 
-body{
+body {
+    /*MASTER BODY CONTROLS*/
     margin: 0px;
 }
 
-nav{
-    text-align: center;
-    background-color: gray;
+
+
+
+/*RIBBON CONTROL*/
+
+.ribbon {
+    /*MASTER*/
+    margin-top: 1vh;
+}
+
+.circle {
+    /*CIRCLE CONTROLS*/
     position: relative;
-    top: 5vh;
-    padding: 1.5vh;
-    border: 2px solid black;
-    border-left: none;
-    border-right: none;
+    border-radius: 100%;
+    width: 9vw;
+    padding-top: 9vw;
+    background: lightgray;
+    margin-left: 45%;
+    border: 2px solid black
 }
 
-nav a{
-    text-decoration: none;
-    display: inline-block;
-    width: 5vw;
-    margin: 0px 10vw 0px;
-    font-size: 2vw;
-    color: black;
-    font-family: 'Open Sans Condensed', sans-serif;
+.bar {
+    /*BAR CONTROLS*/
+    position: relative;
+    height: 8vh;
+    background: lightgray;
+    margin-top: -6.8%;
+    border-top: 2px solid black;
     border-bottom: 2px solid black;
+    z-index: -1;
 }
 
-nav a:hover {
-    color: lightgray;
-    border-bottom: 1px solid lightgray;
+
+
+
+/*CSS Grid Code*/
+
+.wrapper {
+    /*Master CSS Grid Controls*/
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 5vh;
+    display: grid;
+    grid-template-columns: 25vw 25vw 25vw; /*Column Size*/
+    grid-column-gap: 2vw; /*Horizontal Gap*/
+    grid-row-gap: 5vh; /* Vertcal Gap */
+    
 }
 
-section{
-    background-color: white; 
+.item {
+    /*Grid Box Controls*/
+    background-color: black;
+    padding: 75px;
+    color: crimson; /*Text Color*/
+    
+}
+
+.item:nth-child(even) {
+    /*Grid Box Controls (even)*/
+    background-color: darkblue;
+    color: deeppink; /*Text Color*/
+    
+}
+
+
+
+
+section {
+    /*Master Section Controls*/
+    background-color: white;
     min-height: 350px;
     margin: auto;
     margin-top: 10vh;
@@ -43,7 +97,8 @@ section{
     padding-top: 1vh;
 }
 
-h1{
+h1 {
+    /*H1 Controls*/
     color: black;
     text-decoration: underline;
     text-align: center;
@@ -51,11 +106,21 @@ h1{
     font-family: 'Open Sans Condensed', sans-serif;
 }
 
-p{
+h2 {
+    /*H2 Controls*/
+    margin-top: 6vh;
     color: black;
-    margin: 2vh;
+    text-decoration: underline;
     text-align: center;
-    font-size: 1vw;
+    font-size: 1.8vw;
     font-family: 'Open Sans Condensed', sans-serif;
 }
 
+p {
+    /*Paragraph Controls*/
+    color: black;
+    margin: 2vh;
+    text-align: center;
+    font-size: 1.2vw;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
